@@ -1,0 +1,29 @@
+// ==========================================================================
+// Framework
+// ==========================================================================
+
+//Don't include this, just for visuals in the framework
+.flavin__block {
+  min-height: 4rem;
+  padding: 0.5rem;
+  &:nth-child(n) {
+    background-color: red;
+    box-shadow: inset 0 0 16px 8px #FFFFFF,
+                inset 0 0 9px 16px lighten(red, 25%);
+  }
+  &:nth-child(2n) {
+    background-color: blue;
+    box-shadow: inset 0 0 16px 8px #FFFFFF,
+                inset 0 0 9px 16px lighten(blue, 25%);
+  }
+  &:nth-child(3n) {
+    background-color: green;
+    box-shadow: inset 0 0 16px 8px #FFFFFF,
+                inset 0 0 9px 16px lighten(green, 25%);
+  }
+  &:nth-child(4n) {
+    background-color: yellow;
+    box-shadow: inset 0 0 16px 8px #FFFFFF,
+                inset 0 0 9px 16px lighten(yellow, 25%);
+  }
+}
