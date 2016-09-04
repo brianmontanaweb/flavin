@@ -1,0 +1,18 @@
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+.flavin-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flavin-block {
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+//Generic class applied to maintain same structure
+@include flexboxBlocks;
+//Media query specific application of mixin
+@include flexboxBlocks(768px, $max-columns);

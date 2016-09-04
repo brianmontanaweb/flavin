@@ -1,0 +1,26 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+//Defining as default values but can be altered by changing the max-columns
+$max-columns: 12;
+
+//Creates .block-#{$index} that has to be attached to .flex__block for generic styles on that class
+//You can expand on the media queries for flex blocks by cascading after the main one
+@mixin flexboxBlocks($media-query: null, $max-flex: 12) {
+  @if $media-query != null {
+    @for $index from 1 through $max-flex {
+      @media (min-width: $media-query) {
+        .flavin__block.block-#{$media-query}-#{$index} {
+          width: calc(100% * #{$index} / #{$max-flex});
+        }
+      }
+    }
+  } @else {
+    @for $index from 1 through $max-flex {
+      .flavin__block.block-#{$index} {
+        width: calc(100% * #{$index} / #{$max-flex});
+      }
+    }
+  }
+}
