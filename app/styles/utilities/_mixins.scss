@@ -2,8 +2,9 @@
 // Mixins
 // ==========================================================================
 
-//Defining as default values but can be altered by changing the max-columns
+//Defining as default values but can be altered by changing the max-columns and media query value
 $max-columns: 12;
+$media: 768px;
 
 //Creates .block-#{$index} that has to be attached to .flex__block for generic styles on that class
 //You can expand on the media queries for flex blocks by cascading after the main one
