@@ -7,13 +7,21 @@
     flex-wrap: wrap;
 }
 
+.flavin__grid--center {
+  justify-content: center;
+}
+
+.flavin__grid--middle {
+  align-items: center;
+}
+
 .flavin__block {
     box-sizing: border-box;
     flex-shrink: 0;
 }
 
 //Generic flexbox settings that adjusts to how many are in it's container
-.block {
+.block--fill {
   flex: 1 1 auto;
 }
 

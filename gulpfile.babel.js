@@ -35,6 +35,14 @@ gulp.task('styles', () => {
     .pipe($.size({title: 'styles'}));
 });
 
+gulp.task('scripts', () => {
+  return gulp.src([
+    'app/scripts/**/*.js'
+  ])
+    .pipe(gulp.dest('dist/scripts'))
+    .pipe($.size({title: 'scripts'}));
+});
+
 // Clean output directory (dist/temp)
 gulp.task('clean', cb =>
   del(['.tmp', 'dist/*', '!dist/.git'],
@@ -57,6 +65,7 @@ gulp.task('serve', () => {
 // Build production files, the default task
 gulp.task('default', ['clean'], () => {
   runSequence(
-    'styles'
+    'styles',
+  'scripts'
   );
 });

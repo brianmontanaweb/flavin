@@ -5,15 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Digital Style Guide</title>
-
-  <!-- build:css /styles/styles.css -->
+  <title>Flavin: SCSS flexbox framework</title>
 
   <link rel="stylesheet" href="/dist/styles/styles.css" async>
-
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Merriweather:300italic,300" async>
-
-  <!-- endbuild -->
+  <link href="//fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" async>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
 
 </head>
   <body>
@@ -23,35 +19,39 @@
     </header>
 
     <div class="flexbox__container">
-      <div class="flavin__grid">
-        <div class="flavin__block block-1"></div>
-        <div class="flavin__block block-2"></div>
-        <div class="flavin__block block-3"></div>
-        <div class="flavin__block block-4"></div>
-        <div class="flavin__block block-5"></div>
-        <div class="flavin__block block-6"></div>
-        <div class="flavin__block block-7"></div>
-        <div class="flavin__block block-8"></div>
-        <div class="flavin__block block-9"></div>
-        <div class="flavin__block block-10"></div>
-        <div class="flavin__block block-11"></div>
-        <div class="flavin__block block-12"></div>
+      <h2>Flavin flex layouts</h2>
+      <div class="flavin__grid flavin__grid--center">
+        <div class="flavin__grid flavin__grid--center flavin__grid--middle flavin__block block--4">
+          <span>block--4</span>
+        </div>
+        <div class="flavin__grid flavin__grid--center flavin__grid--middle flavin__block block--6 block--768px-12">
+          <span>block--6 block--768px-12</span>
+        </div>
+        <div class="flavin__grid flavin__grid--center flavin__grid--middle flavin__block block--4 block--768px-10">
+          <span>block--4 block--768px-10</span>
+        </div>
+        <div class="flavin__grid flavin__grid--center flavin__grid--middle flavin__block block--8 block--768px-4">
+          <span>block--8 block--768px-4</span>
+        </div>
       </div>
-      <div class="flavin__grid">
-        <div class="flavin__block block"></div>
-        <div class="flavin__block block"></div>
-        <div class="flavin__block block"></div>
-        <div class="flavin__block block"></div>
-        <div class="flavin__block block"></div>
-        <div class="flavin__block block"></div>
-        <div class="flavin__block block"></div>
-        <div class="flavin__block block"></div>
-        <div class="flavin__block block"></div>
-        <div class="flavin__block block"></div>
-        <div class="flavin__block block"></div>
-        <div class="flavin__block block"></div>
+      <h2>Flavin flex layouts fills</h2>
+      <div id="flavin-controls" class="flavin__grid">
+        <div class="flavin__block block--fill"></div>
+        <div class="flavin__block block--fill"></div>
+        <div class="flavin__block block--fill"></div>
+        <div class="flavin__block block--fill"></div>
+        <div class="flavin__block block--fill"></div>
+        <div class="flavin__block block--fill"></div>
+        <div class="flavin__block block--fill"></div>
+        <div class="flavin__block block--fill"></div>
+        <div class="flavin__block block--fill"></div>
+        <div class="flavin__block block--fill"></div>
+        <div class="flavin__block block--fill"></div>
+        <div class="flavin__block block--fill"></div>
       </div>
+      <button class="btn control-show">show</button>
+      <button class="btn control-hide">hide</button>
     </div>
-
+    <script src="/dist/scripts/main.js"></script>
   </body>
 </html>
