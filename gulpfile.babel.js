@@ -25,12 +25,10 @@ gulp.task('styles', () => {
   ])
     .pipe($.changed('.tmp/styles', {extension: '.css'}))
     //Source maps work in Chrome to let you see what partial is being fetched
-    .pipe($.sourcemaps.init())
     .pipe($.sass({
       outputStyle: 'expanded'
     }).on('error', $.sass.logError))
     .pipe($.postcss([autoprefixer()]))
-    .pipe($.sourcemaps.write('./dist'))
     .pipe(gulp.dest('dist/styles'))
     .pipe($.size({title: 'styles'}));
 });
