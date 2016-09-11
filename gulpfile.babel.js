@@ -56,6 +56,7 @@ gulp.task('serve', () => {
       baseDir: './'
     }
   });
+  gulp.watch('app/scripts/**/*.js', ['scripts']);
   //Each watch task is specific to how to control the direction of tasks
   gulp.watch('app/styles/**/*.scss', ['styles']);
   //Watch index for any changes to landing page and run scripts
