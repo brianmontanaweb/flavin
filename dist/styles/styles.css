@@ -1,0 +1,247 @@
+.flavin__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flavin__grid--center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flavin__grid--middle {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
+}
+
+.flavin__block {
+  box-sizing: border-box;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.block--fill {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.flavin__block.block--1 {
+  width: calc(100% * 1 / 12);
+}
+
+.flavin__block.block--2 {
+  width: calc(100% * 2 / 12);
+}
+
+.flavin__block.block--3 {
+  width: calc(100% * 3 / 12);
+}
+
+.flavin__block.block--4 {
+  width: calc(100% * 4 / 12);
+}
+
+.flavin__block.block--5 {
+  width: calc(100% * 5 / 12);
+}
+
+.flavin__block.block--6 {
+  width: calc(100% * 6 / 12);
+}
+
+.flavin__block.block--7 {
+  width: calc(100% * 7 / 12);
+}
+
+.flavin__block.block--8 {
+  width: calc(100% * 8 / 12);
+}
+
+.flavin__block.block--9 {
+  width: calc(100% * 9 / 12);
+}
+
+.flavin__block.block--10 {
+  width: calc(100% * 10 / 12);
+}
+
+.flavin__block.block--11 {
+  width: calc(100% * 11 / 12);
+}
+
+.flavin__block.block--12 {
+  width: calc(100% * 12 / 12);
+}
+
+@media (min-width: 768px) {
+  .flavin__block.block--768px-1 {
+    width: calc(100% * 1 / 12);
+  }
+}
+
+@media (min-width: 768px) {
+  .flavin__block.block--768px-2 {
+    width: calc(100% * 2 / 12);
+  }
+}
+
+@media (min-width: 768px) {
+  .flavin__block.block--768px-3 {
+    width: calc(100% * 3 / 12);
+  }
+}
+
+@media (min-width: 768px) {
+  .flavin__block.block--768px-4 {
+    width: calc(100% * 4 / 12);
+  }
+}
+
+@media (min-width: 768px) {
+  .flavin__block.block--768px-5 {
+    width: calc(100% * 5 / 12);
+  }
+}
+
+@media (min-width: 768px) {
+  .flavin__block.block--768px-6 {
+    width: calc(100% * 6 / 12);
+  }
+}
+
+@media (min-width: 768px) {
+  .flavin__block.block--768px-7 {
+    width: calc(100% * 7 / 12);
+  }
+}
+
+@media (min-width: 768px) {
+  .flavin__block.block--768px-8 {
+    width: calc(100% * 8 / 12);
+  }
+}
+
+@media (min-width: 768px) {
+  .flavin__block.block--768px-9 {
+    width: calc(100% * 9 / 12);
+  }
+}
+
+@media (min-width: 768px) {
+  .flavin__block.block--768px-10 {
+    width: calc(100% * 10 / 12);
+  }
+}
+
+@media (min-width: 768px) {
+  .flavin__block.block--768px-11 {
+    width: calc(100% * 11 / 12);
+  }
+}
+
+@media (min-width: 768px) {
+  .flavin__block.block--768px-12 {
+    width: calc(100% * 12 / 12);
+  }
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #464646;
+  padding: 1rem 5%;
+  box-shadow: inset 0 0 10px #292929;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  color: white;
+  text-shadow: 0 0 10px white;
+}
+
+.flavin__block {
+  margin: 0.5rem;
+  min-height: 2rem;
+  position: relative;
+  text-align: center;
+}
+
+.flavin__block:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.flavin__block span {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-shadow: 0 0 0.5rem white;
+  padding: 1.5rem;
+}
+
+.flavin__block:nth-child(n):after {
+  background-color: #f44336;
+  box-shadow: 0 0 0.75rem 0 #f44336;
+}
+
+.flavin__block:nth-child(2n):after {
+  background-color: #2196f3;
+  box-shadow: 0 0 0.75rem 0 #2196f3;
+}
+
+.flavin__block:nth-child(3n):after {
+  background-color: #8bc34a;
+  box-shadow: 0 0 0.75rem 0 #8bc34a;
+}
+
+.flavin__block:nth-child(4n):after {
+  background-color: #ffeb3b;
+  box-shadow: 0 0 0.75rem 0 #ffeb3b;
+}
+
+.flavin__block:nth-child(4n) span {
+  color: black;
+  text-shadow: 0 0 0.5rem black;
+}
+
+.block--hide {
+  display: none;
+}
+
+.btn {
+  color: white;
+  text-shadow: 0 0 0.5rem white;
+  padding: 0.5rem;
+  border-radius: 0.25em;
+  border: 0.05em solid white;
+  background-color: transparent;
+  box-shadow: 0 0 0.5rem -0.025em white;
+  margin-top: 1em;
+  cursor: pointer;
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all;
+}
+
+.btn + .btn {
+  margin-left: 1em;
+}
+
+.btn:hover {
+  color: black;
+  text-shadow: 0 0 4px black;
+  box-shadow: 0 0 0.5rem 2px white;
+  background-color: white;
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all;
+}
+
+/*# sourceMappingURL=dist/styles.css.map */
