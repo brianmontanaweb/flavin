@@ -9,11 +9,11 @@ var blockToggle = function(elements, toggleClass) {
   //Checks through the array of block--fill and removes the hide or includes it
   //It won't remove all the blocks in the array since I'm only checking if greater than 0
   for(var i =  blockArray.length - 1; i > 0; i--) {
-    if(blockArray[i].classList.contains('block--hide') && toggleClass) {
-      blockArray[i].classList.remove('block--hide');
+    if(blockArray[i].classList.contains('flavin_block--hide') && toggleClass) {
+      blockArray[i].classList.remove('flavin_block--hide');
       return;
-    } else if(!blockArray[i].classList.contains('block--hide') && !toggleClass){
-      blockArray[i].classList.add('block--hide');
+    } else if(!blockArray[i].classList.contains('flavin_block--hide') && !toggleClass){
+      blockArray[i].classList.add('flavin_block--hide');
       return;
     }
 
