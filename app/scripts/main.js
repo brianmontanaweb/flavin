@@ -22,9 +22,9 @@ var blockToggle = function(elements, toggleClass) {
 };
 
 controlShow.addEventListener('click', function() {
-  blockToggle('#flavin-controls .block--fill', true);
+  blockToggle('#flavin-controls .flavin_block--fill', true);
 });
 
 controlHide.addEventListener('click', function() {
-  blockToggle('#flavin-controls .block--fill', false);
+  blockToggle('#flavin-controls .flavin_block--fill', false);
 });
