@@ -20,10 +20,8 @@ gulp.task('styles', () => {
   // For best performance, don't add Sass partials to `gulp.src` just globby glob it
   //Using postCSS cause it's p cool, right now just using autoprefixer after Sass is compiled
   return gulp.src([
-    'app/styles/**/*.scss',
-    'app/styles/**/*.css'
+    'app/styles/**/*.scss'
   ])
-    .pipe($.changed('.tmp/styles', {extension: '.css'}))
     //Source maps work in Chrome to let you see what partial is being fetched
     .pipe($.sass({
       outputStyle: 'expanded'
@@ -43,7 +41,7 @@ gulp.task('scripts', () => {
 
 // Clean output directory (dist/temp)
 gulp.task('clean', cb =>
-  del(['.tmp', 'dist/*', '!dist/.git'],
+  del(['.tmp', 'dist/**/*', '!dist/.git'],
   {dot: true}, cb));
 
 // Watch files for changes & reload
@@ -65,6 +63,6 @@ gulp.task('serve', () => {
 gulp.task('default', ['clean'], () => {
   runSequence(
     'styles',
-  'scripts'
+    'scripts'
   );
 });

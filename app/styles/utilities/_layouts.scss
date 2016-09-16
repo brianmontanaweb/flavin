@@ -20,13 +20,13 @@
     flex-shrink: 0;
 }
 
-//Generic flexbox settings that adjusts to how many are in it's container
-.block--fill {
-  flex: 1 1 auto;
-}
-
 //Generic class applied to maintain same structure with default settings
 @include flexboxBlocks;
 
 //Media query specific application of mixin
 @include flexboxBlocks(768px, $max-columns);
+
+//Generic flexbox settings that adjusts to how many are in it's container
+.flavin__block--fill {
+  flex: 1 1 auto;
+}

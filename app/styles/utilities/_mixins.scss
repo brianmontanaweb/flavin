@@ -12,14 +12,14 @@ $media: 768px;
   @if $media-query != null {
     @for $index from 1 through $max-flex {
       @media (min-width: $media-query) {
-        .flavin__block.block--#{$media-query}-#{$index} {
+        .flavin__block--#{$media-query}-#{$index} {
           width: calc(100% * #{$index} / #{$max-flex});
         }
       }
     }
   } @else {
     @for $index from 1 through $max-flex {
-      .flavin__block.block--#{$index} {
+      .flavin__block--#{$index} {
         width: calc(100% * #{$index} / #{$max-flex});
       }
     }
